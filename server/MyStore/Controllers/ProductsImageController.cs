@@ -23,7 +23,7 @@ namespace MyStore.Controllers
             _imageService = imageService;
         }
 
-        // GET: api/
+        // GET: api/Products/<id>/Image
         [HttpGet("{id}/Image")]
         public async Task<ActionResult> GetProductImage(int id)
         {
@@ -45,7 +45,7 @@ namespace MyStore.Controllers
 
 
 
-        // GET: api/Users/<id>
+        // GET: api/Products/<id>/Image
         [HttpPut("{id}/Image")]
         [Authorize(Roles = "Admin")]
         public async Task<ActionResult> SetProductImage(IFormFile file, int id)

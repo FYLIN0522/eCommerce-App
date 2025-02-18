@@ -22,7 +22,7 @@ namespace MyStore.Controllers
             _service = service;
         }
 
-        // GET: api/ShoppingCarts/<UserId>
+        // GET: api/<UserId>/ShoppingCarts/
         [HttpGet("{userId}/ShoppingCart")]
         [Authorize]
         public async Task<IActionResult> GetCart(int userId)
@@ -45,7 +45,7 @@ namespace MyStore.Controllers
             return Ok(cart);
         }
 
-        // POST: api/ShoppingCarts/<userId>
+        // POST: api/<userId>/ShoppingCarts/
         [HttpPost("{userId}/ShoppingCart")]
         [Authorize]
         public async Task<IActionResult> AddToCart(int userId, int productId, int quantity)

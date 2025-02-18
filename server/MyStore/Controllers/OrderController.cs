@@ -24,7 +24,7 @@ namespace MyStore.Controllers
             _JWTservice = service;
         }
 
-        // GET: api/<UserId>/Order/
+        // GET: api/<userId>/Order/
         [HttpGet("{userId}/Order")]
         [Authorize]
         public async Task<IActionResult> GetOrderList(int userId)
@@ -46,7 +46,7 @@ namespace MyStore.Controllers
             return Ok(cart);
         }
 
-        // GET: api/<UserId>/Order/
+        // GET: api/<userId>/Order/<orderId>
         [HttpGet("{userId}/Order/{orderId}")]
         [Authorize]
         public async Task<IActionResult> GetOrder(int userId, int orderId)
